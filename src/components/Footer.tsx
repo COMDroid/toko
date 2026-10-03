@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram } from "lucide-react";
+import { InstagramIcon as Instagram } from "./InstagramIcon";
 
 export default function Footer() {
   return (

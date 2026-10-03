@@ -10,8 +10,8 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://picsum.photos/seed/tokohero/1920/1080"
-          alt="Streetwear fashion campaign"
+          src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=1920&h=1080"
+          alt="Male fashion model in streetwear campaign"
           fill
           className="object-cover object-center"
           priority

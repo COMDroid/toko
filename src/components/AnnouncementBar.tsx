@@ -7,7 +7,7 @@ export default function AnnouncementBar() {
     <motion.div
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="bg-[var(--bg-dark)] text-[var(--text-on-dark)] overflow-hidden"
+      className="bg-[var(--bg-secondary)] text-[var(--text-on-dark)] overflow-hidden border-b border-[var(--border)]"
     >
       <div className="py-2 flex whitespace-nowrap">
         <div className="animate-marquee flex items-center gap-12 text-xs tracking-[0.2em] uppercase font-medium">

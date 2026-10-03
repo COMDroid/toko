@@ -37,7 +37,7 @@ export default function Header() {
         transition={{ delay: 0.1 }}
         className={`sticky top-0 z-[var(--z-sticky)] transition-all duration-300 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-[var(--shadow-sm)] border-b border-[var(--border)]"
+            ? "bg-[var(--bg-card)]/90 backdrop-blur-md shadow-[var(--shadow-sm)] border-b border-[var(--border)]"
             : "bg-[var(--bg-primary)]"
         }`}
       >
@@ -134,7 +134,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 left-0 bottom-0 w-[min(85vw,360px)] bg-white z-[var(--z-modal)] lg:hidden flex flex-col"
+              className="fixed top-0 left-0 bottom-0 w-[min(85vw,360px)] bg-[var(--bg-card)] z-[var(--z-modal)] lg:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-4 border-b border-[var(--border)]">
                 <span

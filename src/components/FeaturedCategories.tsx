@@ -7,22 +7,22 @@ import { motion } from "framer-motion";
 const categories = [
   {
     name: "Oversized Tees",
-    image: "https://picsum.photos/seed/tokocat1/600/800",
+    image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=600&h=800",
     slug: "Oversized Tees",
   },
   {
     name: "Graphic Tees",
-    image: "https://picsum.photos/seed/tokocat2/600/800",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800",
     slug: "Graphic Tees",
   },
   {
     name: "Shirts",
-    image: "https://picsum.photos/seed/tokocat3/600/800",
+    image: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&q=80&w=600&h=800",
     slug: "Shirts",
   },
   {
     name: "Bottomwear",
-    image: "https://picsum.photos/seed/tokocat4/600/800",
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&q=80&w=600&h=800",
     slug: "Bottomwear",
   },
 ];

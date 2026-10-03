@@ -9,8 +9,22 @@ import { Product } from "@/types";
  * reloads. Swap with real product photography when available.
  */
 
-const IMG = (seed: number, w = 800, h = 1000) =>
-  `https://picsum.photos/seed/toko${seed}/${w}/${h}`;
+const unsplashIds = [
+  "1529374255404-311a2a4f1fd9",
+  "1515886657613-9f3515b0c78f",
+  "1492707892479-7bc8d5a4ee93",
+  "1583743814966-8936f5b7be1a",
+  "1576566588028-4147f3842f27",
+  "1541099649105-f69ad21f3246",
+  "1552374196-1ab2a1c593e8",
+  "1503342394128-c104d54dba01",
+  "1521572163474-6864f9cf17ab",
+];
+
+const IMG = (seed: number, w = 800, h = 1000) => {
+  const id = unsplashIds[seed % unsplashIds.length];
+  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=80&w=${w}&h=${h}`;
+};
 
 export const products: Product[] = [
   {

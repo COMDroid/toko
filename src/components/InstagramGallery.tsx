@@ -2,11 +2,19 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
+import { InstagramIcon as Instagram } from "./InstagramIcon";
 
-const images = Array.from({ length: 6 }, (_, i) => ({
+const unsplashIds = [
+  "1552374196-1ab2a1c593e8",
+  "1503341455253-b2e723bb3dbb",
+  "1503342217505-b0a15ec3261c",
+  "1492707892479-7bc8d5a4ee93",
+  "1469334031218-e382a71b716b",
+  "1485230405346-71acb9518d9c"
+];
+const images = unsplashIds.map((id, i) => ({
   id: i,
-  src: `https://picsum.photos/seed/tokoig${i + 1}/600/600`,
+  src: `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=80&w=600&h=600`,
   alt: `Street style look ${i + 1}`,
 }));
 

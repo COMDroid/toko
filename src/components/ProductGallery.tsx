@@ -73,7 +73,7 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
           </AnimatePresence>
 
           {/* Zoom Hint */}
-          <div className="absolute bottom-4 right-4 p-2 bg-white/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute bottom-4 right-4 p-2 bg-[var(--bg-card)]/80 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
             <ZoomIn className="w-4 h-4 text-[var(--text-primary)]" />
           </div>
 
@@ -82,14 +82,14 @@ export default function ProductGallery({ images, productName }: ProductGalleryPr
             <>
               <button
                 onClick={(e) => { e.stopPropagation(); goTo(activeIndex - 1); }}
-                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-[var(--bg-card)]/80 backdrop-blur-sm rounded-full hover:bg-[var(--bg-card)] transition-colors opacity-0 group-hover:opacity-100"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); goTo(activeIndex + 1); }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-white/80 backdrop-blur-sm rounded-full hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-[var(--bg-card)]/80 backdrop-blur-sm rounded-full hover:bg-[var(--bg-card)] transition-colors opacity-0 group-hover:opacity-100"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-5 h-5" />

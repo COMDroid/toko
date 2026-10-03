@@ -11,11 +11,7 @@ import ProductGallery from "@/components/ProductGallery";
 import VariantSelector from "@/components/VariantSelector";
 import ProductGrid from "@/components/ProductGrid";
 
-interface ProductPageProps {
-  params: Promise<{ slug: string }>;
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
+export default function ProductPage({ params }: PageProps<"/product/[slug]">) {
   const { slug } = use(params);
   const product = getProductBySlug(slug);
 

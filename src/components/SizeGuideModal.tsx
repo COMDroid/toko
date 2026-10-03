@@ -58,7 +58,7 @@ export default function SizeGuideModal({ open, onClose }: SizeGuideModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative bg-white w-full max-w-lg max-h-[80vh] overflow-y-auto z-10 p-6 sm:p-8"
+            className="relative bg-[var(--bg-card)] w-full max-w-lg max-h-[80vh] overflow-y-auto z-10 p-6 sm:p-8"
           >
             <div className="flex items-center justify-between mb-6">
               <h2

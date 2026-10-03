@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
+import CampaignMedia from "@/components/CampaignMedia";
 import FeaturedCategories from "@/components/FeaturedCategories";
 import ProductGrid from "@/components/ProductGrid";
 import EditorialSection from "@/components/EditorialSection";
@@ -14,6 +15,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+
+      <CampaignMedia />
 
       <FeaturedCategories />
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { use, useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -11,7 +11,28 @@ import ProductFilters from "@/components/ProductFilters";
 import SortSelector from "@/components/SortSelector";
 import ProductGrid from "@/components/ProductGrid";
 
-export default function ShopPage() {
+export default function ShopPage(props: PageProps<"/shop">) {
+  return (
+    <Suspense fallback={<ShopSkeleton />}>
+      <ShopContent />
+    </Suspense>
+  );
+}
+
+function ShopSkeleton() {
+  return (
+    <div className="min-h-screen">
+      <div className="bg-[var(--bg-dark)] text-white py-16 sm:py-20">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="h-10 w-64 bg-white/10 animate-pulse rounded mb-3" />
+          <div className="h-4 w-96 bg-white/10 animate-pulse rounded" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ShopContent() {
   const searchParams = useSearchParams();
 
   const [filters, setFilters] = useState<Filters>({

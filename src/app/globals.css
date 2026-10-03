@@ -1,25 +1,26 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
 
 /* ─── TOKO FITS Design System ─── */
 
 :root {
-  /* Brand colours — derived from TOKO FITS Instagram identity */
-  --bg-primary: #FAFAF8;
-  --bg-secondary: #F0EFEB;
-  --bg-dark: #0A0F24;
-  --bg-card: #FFFFFF;
+  color-scheme: dark;
+  
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --bg-dark: #0A0A0A;
+  --bg-card: #18181B;
 
-  --text-primary: #0A0F24;
-  --text-secondary: #5A5A5A;
-  --text-muted: #8A8A8A;
-  --text-on-dark: #F5F0EB;
-  --text-on-dark-muted: #A0A0A0;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-muted: #A1A1AA;
 
   --accent: #C4A77D;
   --accent-hover: #B5956A;
-  --border: #E5E5E0;
-  --border-hover: #D0D0CA;
+  --border: #27272A;
+  --border-hover: #3F3F46;
 
   --success: #4CAF50;
   --error: #E53935;

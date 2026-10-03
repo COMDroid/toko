@@ -90,7 +90,7 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
             className={`absolute top-3 right-3 p-2 rounded-full transition-all duration-300 ${
               wishlisted
                 ? "bg-[var(--bg-dark)] text-white"
-                : "bg-white/80 backdrop-blur-sm text-[var(--text-primary)] opacity-0 group-hover:opacity-100"
+                : "bg-[var(--bg-card)]/80 backdrop-blur-sm text-[var(--text-primary)] opacity-0 group-hover:opacity-100"
             }`}
             aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
           >

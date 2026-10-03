@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col" style={{ fontFamily: "var(--font-body)" }}>
+      <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]" style={{ fontFamily: "var(--font-body)" }}>
         <StoreProvider>
           <AnnouncementBar />
           <Header />

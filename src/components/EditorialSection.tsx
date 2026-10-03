@@ -19,7 +19,7 @@ export default function EditorialSection() {
             className="relative aspect-[3/4] lg:aspect-[4/5] overflow-hidden"
           >
             <Image
-              src="https://picsum.photos/seed/tokoedit/900/1200"
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=900&h=1200"
               alt="Editorial streetwear campaign"
               fill
               className="object-cover"

@@ -47,7 +47,7 @@ export default function SortSelector({ value, onChange }: SortSelectorProps) {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-52 bg-white border border-[var(--border)] shadow-[var(--shadow-md)] z-[var(--z-dropdown)]">
+        <div className="absolute right-0 top-full mt-1 w-52 bg-[var(--bg-card)] border border-[var(--border)] shadow-[var(--shadow-md)] z-[var(--z-dropdown)]">
           {options.map((opt) => (
             <button
               key={opt.value}

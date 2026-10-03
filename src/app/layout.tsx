@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { StoreProvider } from "@/store/store-context";
-import AnnouncementBar from "@/components/AnnouncementBar";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CartDrawer from "@/components/CartDrawer";
+import LayoutWrapper from "@/components/LayoutWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,7 +22,7 @@ export const metadata: Metadata = {
     "Everyday streetwear. Fresh looks. Your own style. Shop oversized tees, graphic tees, shirts, and bottomwear at TOKO FITS TIRUR.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
@@ -33,11 +30,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]" style={{ fontFamily: "var(--font-body)" }}>
         <StoreProvider>
-          <AnnouncementBar />
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CartDrawer />
+          <LayoutWrapper>
+            {children}
+          </LayoutWrapper>
         </StoreProvider>
       </body>
     </html>

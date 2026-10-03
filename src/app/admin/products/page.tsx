@@ -17,6 +17,14 @@ export default function AdminProducts() {
       try {
         const snap = await getDocs(collection(db, "products"));
         const data = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        
+        // Sort newest first (by createdAt). Products without createdAt go to the bottom.
+        data.sort((a: any, b: any) => {
+          const timeA = a.createdAt?.toMillis?.() || 0;
+          const timeB = b.createdAt?.toMillis?.() || 0;
+          return timeB - timeA;
+        });
+        
         setProducts(data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -51,8 +59,8 @@ export default function AdminProducts() {
         </Link>
       </div>
 
-      <div className="bg-[#111] rounded-2xl border border-white/5 overflow-hidden">
-        <table className="w-full text-left">
+      <div className="bg-[#111] rounded-2xl border border-white/5 overflow-x-auto">
+        <table className="w-full text-left min-w-[800px]">
           <thead className="bg-[#1A1A1A] border-b border-white/10">
             <tr>
               <th className="p-4 font-medium text-white/60">Product</th>
@@ -78,13 +86,19 @@ export default function AdminProducts() {
                         <div className="w-full h-full bg-white/10" />
                       )}
                     </div>
-                    <div>
-                      <p className="font-bold text-white">{product.name}</p>
-                      <p className="text-xs text-white/50">{product.slug}</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-bold text-white truncate max-w-[150px] sm:max-w-[250px]">{product.name}</p>
+                      <p className="text-xs text-white/50 truncate max-w-[150px] sm:max-w-[250px]">{product.slug}</p>
                     </div>
                   </td>
-                  <td className="p-4">{product.category}</td>
-                  <td className="p-4">₹{product.price}</td>
+                  <td className="p-4 uppercase">
+                    {product.category}
+                    {product.subcategory && <span className="block text-xs text-white/50">{product.subcategory}</span>}
+                  </td>
+                  <td className="p-4">
+                    <span className="block font-bold">₹{product.price}</span>
+                    {product.mrp > 0 && <span className="block text-xs text-white/40 line-through">₹{product.mrp}</span>}
+                  </td>
                   <td className="p-4">
                     <span className={`px-2 py-1 rounded text-xs font-bold ${product.stock > 0 ? "bg-green-500/20 text-green-400" : "bg-red-500/20 text-red-400"}`}>
                       {product.stock > 0 ? `${product.stock} in stock` : "Out of stock"}
